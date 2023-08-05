@@ -20,3 +20,21 @@ body{
 .mainContainer ul{
     padding: 0;
 }
+
+@media only screen and (max-width: 426px){
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .mainContainer div{
+        margin: 1em;
+    }
+}
+@media only screen and (max-width: 768px){
+    .mainContainer{
+        grid-template-columns: 1fr 1fr;
+    }
+    .mainContainer div{
+        margin: 1em;
+    }
+}
