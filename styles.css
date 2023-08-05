@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.mainContainer{
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.mainContainer div{
+    padding: 1em;
+    border: 1px solid gray;
+    margin: 2em;
+    line-height: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: bisque;
+}
+.mainContainer ul{
+    padding: 0;
+}
