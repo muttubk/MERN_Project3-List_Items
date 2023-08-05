@@ -15,7 +15,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: bisque;
+    background-color: rgb(255, 196, 251);
 }
 .mainContainer ul{
     padding: 0;
