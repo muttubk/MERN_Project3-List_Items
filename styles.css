@@ -24,19 +24,10 @@ body{
     margin: 0;
 }
 
-/* .mainContainer ul{
+.mainContainer ul{
     padding: 0;
-} */
+}
 
-.mainContainer table{
-    border-collapse: collapse;
-    width: 80%;
-}
-.mainContainer td{
-    border: 1px solid black;
-    padding: 0.5rem;
-    /* text-align: center; */
-}
 
 @media only screen and (max-width: 426px){
     .mainContainer{
