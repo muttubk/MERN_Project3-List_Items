@@ -328,13 +328,13 @@ let mainContainer=document.getElementsByClassName("mainContainer")[0];
 const listAllFoodItems=(foodDataSet)=>{
     let container=document.createElement("div");
     container.innerHTML="<h1>List of Food Items</h1>";
-    let ul=document.createElement("ul");
+    let list=document.createElement("table");
     //iterating each item
     foodDataSet.forEach(function(item){
-        ul.innerHTML+=`<li>${item.foodname}</li>`;
+        list.innerHTML+=`<tr><td>${item.foodname}</td></tr>`;
     })
-    //appending ul & container to their parents
-    container.appendChild(ul);
+    //appending list & container to their parents
+    container.appendChild(list);
     mainContainer.appendChild(container);
 }
 listAllFoodItems(foodDataSet);
@@ -346,14 +346,14 @@ listAllFoodItems(foodDataSet);
 const listAllFoodWithCategory=(foodDataSet,category)=>{
     let container=document.createElement("div");
     container.innerHTML="<h1>"+category+"</h1>";
-    let ul=document.createElement("ul");
+    let list=document.createElement("table");
     //iterating each item with category condition
     foodDataSet.forEach((item)=>{
         if(item.category==category){
-            ul.innerHTML+=`<li>${item.foodname}</li>`;
+            list.innerHTML+=`<tr><td>${item.foodname}</td></tr>`;
         }
     })
-    container.appendChild(ul);
+    container.appendChild(list);
     mainContainer.appendChild(container);
 }
 
@@ -371,16 +371,16 @@ listAllFoodWithCategory(foodDataSet, "Dairy");
 const calorieAbove100=(foodDataSet)=>{
     let container=document.createElement("div");
     container.innerHTML="<h1>Calorie > 100</h1>";
-    let ul=document.createElement("ul");
+    let list=document.createElement("table");
     //filtering for calorie>100 & storing in arr
     let arr = foodDataSet.filter((item)=>{
         return item.calorie>100
     })
     //printing each item in arr
     arr.forEach((item)=>{
-        ul.innerHTML+=`<li>${item.foodname} : ${item.calorie}</li>`;
+        list.innerHTML+=`<tr><td>${item.foodname}</td><td>${item.calorie}</td></tr>`;
     })
-    container.appendChild(ul);
+    container.appendChild(list);
     mainContainer.appendChild(container);
 }
 calorieAbove100(foodDataSet);
@@ -391,16 +391,16 @@ calorieAbove100(foodDataSet);
 const calorieBelow100=(foodDataSet)=>{
     let container=document.createElement("div");
     container.innerHTML="<h1>\Calorie < 100</h1>";
-    let ul=document.createElement("ul");
+    let list=document.createElement("table");
     //filtering for calorie<100 & storing in arr
     let arr=foodDataSet.filter((item)=>{
         return item.calorie<100
     })
     //printing each item in arr
     arr.forEach((item)=>{
-        ul.innerHTML+=`<li>${item.foodname} : ${item.calorie}</li>`;
+        list.innerHTML+=`<tr><td>${item.foodname}</td><td>${item.calorie}</td></tr>`;
     })
-    container.appendChild(ul);
+    container.appendChild(list);
     mainContainer.appendChild(container);
 }
 calorieBelow100(foodDataSet);
@@ -411,13 +411,13 @@ calorieBelow100(foodDataSet);
 const sortByProtiens=(foodDataSet)=>{
     let container=document.createElement("div");
     container.innerHTML="<h1>Sorted By Protiens</h1>";
-    let ul=document.createElement("ul");
+    let list=document.createElement("table");
     //sorting foodDataSet in descending order of protien
     foodDataSet.sort((item1,item2)=>item2.protiens-item1.protiens);
     foodDataSet.forEach((item)=>{
-        ul.innerHTML+=`<li>${item.foodname} : ${item.protiens}</li>`;
+        list.innerHTML+=`<tr><td>${item.foodname}</td><td>${item.protiens}</td></tr>`;
     })
-    container.appendChild(ul);
+    container.appendChild(list);
     mainContainer.appendChild(container);
 }
 sortByProtiens(foodDataSet);
@@ -428,13 +428,13 @@ sortByProtiens(foodDataSet);
 const sortByCab=(foodDataSet)=>{
     let container=document.createElement("div");
     container.innerHTML="<h1>Sorted by Cab</h1>";
-    let ul=document.createElement("ul");
+    let list=document.createElement("table");
     //sorting foodDataSet in ascending order of cab
     foodDataSet.sort((item1,item2)=> item1.cab-item2.cab);
     foodDataSet.forEach((item)=>{
-        ul.innerHTML+=`<li>${item.foodname} : ${item.cab}</li>`;
+        list.innerHTML+=`<tr><td>${item.foodname}</td><td>${item.cab}</td></tr>`;
     })
-    container.appendChild(ul);
+    container.appendChild(list);
     mainContainer.appendChild(container);
 }
 sortByCab(foodDataSet);
