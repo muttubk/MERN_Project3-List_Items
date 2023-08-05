@@ -20,6 +20,11 @@ body{
 .mainContainer ul{
     padding: 0;
 }
+.mainContainer h1{
+    line-height: 2rem;
+    padding: 1rem;
+    margin: 0;
+}
 
 @media only screen and (max-width: 426px){
     .mainContainer{
