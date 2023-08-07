@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: beige;
 }
 .mainContainer{
     margin: 1em;
@@ -16,7 +17,8 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: bisque;
-}
+    background: radial-gradient(rgb(255, 255, 163), rgb(255, 180, 100));
+    }
 
 .mainContainer h1{
     line-height: 2rem;
